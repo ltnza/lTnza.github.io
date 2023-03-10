@@ -7,9 +7,9 @@ share-img: /assets/img/path.jpg
 tags: [ai, prompt]
 ---
 
-| Kolom Kiri | Kolom Kanan |
+| Models | Prompt |
 | --- | --- |
-| Teks 1 | <input type="text" name="input1" id="input1" size="30"> |
+| SSA - Raye | <input type="text" name="input1" id="input1" size="30" value"<lora:dekraye:1>, blonde hair, black headdress, dark brown tie"> |
 | Teks 2 | <input type="text" name="input2" id="input2" size="30"> |
 | Teks 3 | <input type="text" name="input3" id="input3" size="30"> |
 | Teks 4 | <input type="text" name="input4" id="input4" size="30"> |

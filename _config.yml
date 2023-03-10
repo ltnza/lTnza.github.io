@@ -52,20 +52,20 @@ social-network-links:
   email: "someone@example.com"
   rss: false  # remove this line if you don't want to show an RSS link at the bottom
   facebook: false
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: c/daattali
+  github: false
+  twitter: false
+  patreon: false
+  youtube: false
 #  medium: yourname
 #  reddit: yourname
-#  linkedin: daattali
+#  linkedin: false
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
 #  instagram: deanat78
 #  spotify: yourname
 #  telephone: +14159998888
-#  steam: deanat78
+#  steam: false
 #  twitch: yourname
 #  yelp: yourname
 #  telegram: yourname
@@ -97,7 +97,7 @@ share-links-active:
 url-pretty: "lTnza.github.io"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-excerpt_length: 20
+excerpt_length: 0
 
 # Whether or not to show an excerpt for every blog post in the feed page
 feed_show_excerpt: true

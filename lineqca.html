@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Efek Yu-Gi-Oh!</title>
+  <style>
+    /* CSS untuk tampilan kalkulator */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .calculator {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    
+    .form-group input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kalkulator Efek Yu-Gi-Oh!</h1>
+
+  <div class="calculator">
+    <form id="effect-form">
+      <div class="form-group">
+        <label for="x-input">Bilangan bulat (x):</label>
+        <input type="number" id="x-input" required>
+      </div>
+      <div class="form-group">
+        <label for="level-input">Level Monster Efek:</label>
+        <input type="number" id="level-input" required>
+      </div>
+      <div class="form-group">
+        <label for="opponent-cards-input">Jumlah kartu lawan:</label>
+        <input type="number" id="opponent-cards-input" required>
+      </div>
+      <div class="form-group">
+        <label for="gy-cards-input">Jumlah kartu di Graveyard (GY):</label>
+        <input type="number" id="gy-cards-input" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Hitung">
+      </div>
+    </form>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById('effect-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var x = parseInt(document.getElementById('x-input').value);
+      var level = parseInt(document.getElementById('level-input').value);
+      var opponentCards = parseInt(document.getElementById('opponent-cards-input').value);
+      var gyCards = parseInt(document.getElementById('gy-cards-input').value);
+
+      var result = calculateEffect(x, level, opponentCards, gyCards);
+      document.getElementById('result').textContent = result;
+    });
+
+    function calculateEffect(x, level, opponentCards, gyCards) {
+      // Menghitung efek berdasarkan formula
+      var result = (x * level) + opponentCards;
+
+      // Memeriksa apakah hasilnya sama dengan jumlah kartu di Graveyard (GY) milikmu
+      if (result === gyCards) {
+        return "Efek terpenuhi!";
+      } else {
+        return "Efek tidak terpenuhi.";
+      }
+    }
+  </script>
+</body>
+</html>
